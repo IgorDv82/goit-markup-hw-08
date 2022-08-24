@@ -1,0 +1,27 @@
+.features {
+  padding-bottom: 0;
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    max-width: 270px;
+  }
+  &__wrap {
+    @include centered();
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--features-icon-backround);
+  }
+  &__title {
+    margin-bottom: 10px;
+
+    @include font(14px, 700, 1.14, null);
+    text-transform: uppercase;
+  }
+  &__text {
+    @include font(14px, null, 1.71, null);
+  }
+}

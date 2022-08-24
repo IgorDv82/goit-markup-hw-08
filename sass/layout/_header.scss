@@ -1,0 +1,22 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &-container {
+    @include centered(flex, center, null);
+  }
+}
+
+.navigation {
+  @include centered(flex, center, null);
+}
+// links
+
+.header__link-list {
+  margin-left: 93px;
+}
+
+// contacts
+
+.header__contacts {
+  margin-left: auto;
+}

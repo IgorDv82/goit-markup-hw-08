@@ -1,0 +1,106 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--footer-background-color);
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.logo__studio--light {
+  color: var(--footer-logo-studio);
+}
+
+// footer section join-us
+.footer__join-us {
+  margin-left: 70px;
+}
+.join-us-title {
+  @include font(14px, 700, 1.14, null);
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.footer__join-us-title {
+  margin-bottom: 20px;
+}
+
+// social-links
+.social-list__link--background {
+  background-color: var(--footer-icon-background);
+}
+.social-list__icon--color {
+  fill: var(--footer-icon-color);
+}
+// end
+
+.subscribe {
+  margin-left: 93px;
+}
+.subscribe-title {
+  @include font(14px, 700, 1.14, null);
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.footer_subscribe-title {
+  margin-bottom: 20px;
+}
+
+.subscribe-form {
+  position: relative;
+  display: flex;
+  &__input {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 15px 16px;
+
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: transparent;
+
+    transition-property: border-color;
+    transition-duration: var(--time-duration);
+    transition-timing-function: var(--time-function);
+    &::placeholder {
+      @include font(16px, null, 1.25, 0.03em);
+
+      color: rgba(255, 255, 255, 0.6);
+    }
+    &:focus {
+      border-color: var(--accent-color);
+    }
+  }
+  &__label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include font(16px, null, 1.25, 0.03em);
+
+    color: transparent;
+    transition-property: transform, color;
+    transition-duration: var(--time-duration);
+    transition-timing-function: var(--time-function);
+    .subscribe-form__input:not(:placeholder-shown) + & {
+      transform: translate(-150%, -50%);
+      color: var(--accent-color);
+    }
+  }
+}
+
+.subscribe__btn {
+  @include centered();
+}
+.btn__icon {
+  margin-left: 10px;
+  fill: #ffffff;
+}

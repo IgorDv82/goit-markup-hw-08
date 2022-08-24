@@ -1,0 +1,27 @@
+.contacts {
+  @include centered(flex, center, null);
+  & .contacts__item + .contacts__item {
+    margin-left: 50px;
+  }
+  &__link {
+    @include centered(flex, center, null);
+    padding-top: 31px;
+    padding-bottom: 31px;
+
+    @include font(14px, 500, 1.14, 0.02em);
+
+    color: var(--primary-color-text);
+
+    transition-property: color;
+    transition-duration: var(--time-duration);
+    transition-timing-function: var(--time-function);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+.clients__section-title {
+  margin-bottom: 50px;
+}
+
+.company-list {
+  @include centered(flex, center, null);
+  gap: 30px;
+  &__link {
+    width: 170px;
+    height: 92px;
+    @include centered();
+
+    color: var(--client-icon-color);
+    border: 1px solid var(--client-icon-color);
+    border-radius: 4px;
+
+    transition-property: color, border-color;
+    transition-duration: var(--time-duration);
+    transition-timing-function: var(--time-function);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}

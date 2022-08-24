@@ -1,0 +1,19 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  color: var(--primary-color-text);
+  background-color: #ffffff;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.title {
+  color: var(--primary-title-color);
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

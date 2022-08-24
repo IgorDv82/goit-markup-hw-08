@@ -1,0 +1,23 @@
+.address {
+  width: 231px;
+  .address-list__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+.address-list {
+  @include font(14px, null, 1.71, null);
+  &__link {
+    color: var(--footer-link-color);
+
+    transition-property: color;
+    transition-duration: var(--time-duration);
+    transition-timing-function: var(--time-function);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+    &--white {
+      color: var(--footer-logo-studio);
+    }
+  }
+}

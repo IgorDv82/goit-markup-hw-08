@@ -1,0 +1,26 @@
+.social-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 30px;
+  &__link {
+    @include centered();
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--team-icon-background);
+    color: var(--client-icon-color);
+
+    transition-property: color, background-color;
+    transition-duration: var(--time-duration);
+    transition-timing-function: var(--time-function);
+  }
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--accent-color);
+    color: var(--team-icon-hover);
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}

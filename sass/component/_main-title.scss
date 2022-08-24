@@ -1,0 +1,6 @@
+.main__title {
+  @include font(44px, 900, 1.36, 0.06em);
+  text-transform: uppercase;
+
+  color: var(--hero-title-color);
+}

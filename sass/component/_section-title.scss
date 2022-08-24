@@ -1,0 +1,6 @@
+.section-title {
+  @include font(36px, 700, 1.17, null);
+  text-align: center;
+
+  color: var(--primary-title-color);
+}
