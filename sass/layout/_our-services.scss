@@ -1,3 +1,9 @@
+.our-services {
+  display: none;
+  @include desktop() {
+    display: block;
+  }
+}
 .our-services__section-title {
   margin-bottom: 50px;
 }
