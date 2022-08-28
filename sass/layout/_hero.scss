@@ -1,21 +1,37 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   background-color: var(--hero-background-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero.jpg);
+    url(/images/hero-m.jpg);
+  @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/hero-m@2x.jpg);
+  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  &__main-title {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    max-width: 696px;
-    text-align: center;
+
+  @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/hero-t.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/hero-t@2x.jpg);
+    }
   }
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/hero-d.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/hero-d@2x.jpg);
+    }
+  }
+}
+.hero__main-title {
+  margin-bottom: 30px;
 }

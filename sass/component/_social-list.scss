@@ -2,7 +2,6 @@
   display: flex;
   gap: 10px;
   justify-content: center;
-  padding-bottom: 30px;
   &__link {
     @include centered();
     width: 44px;

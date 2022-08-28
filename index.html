@@ -64,12 +64,12 @@
     <!-- main -->
     <main>
       <!-- section hero -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="main__title hero__main-title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="btn" data-modal-open>Замовити послугу</button>
         </div>
-      </section> -->
+      </section>
 
       <!-- features -->
       <section class="features section">
@@ -131,19 +131,37 @@
           <ul class="service-list list">
             <li class="service-list__item">
               <a href="" class="service-list__link link">
-                <img src="./images/service-1.jpg" alt="работа за компьютером" width="370" />
+                <picture>
+                  <source
+                    media="(1200px)"
+                    srcset="./images/service-01d.jpg 1x, ./images/service-01d@2x.jpg 2x"
+                  />
+                  <img src="./images/service-1.jpg" alt="работа за компьютером" />
+                </picture>
                 <p class="service-list__text">Десктопні додатки</p>
               </a>
             </li>
             <li class="service-list__item">
               <a href="" class="service-list__link link">
-                <img src="./images/service-2.jpg" alt="мобильный телефон в руке" width="370" />
+                <picture>
+                  <source
+                    media="(1200px)"
+                    srcset="./images/service-02d.jpg 1x, ./images/service-02d@2x.jpg 2x"
+                  />
+                  <img src="./images/service-2.jpg" alt="мобильный телефон в руке" />
+                </picture>
                 <p class="service-list__text">Мобільні додатки</p>
               </a>
             </li>
             <li class="service-list__item">
               <a href="" class="service-list__link link">
-                <img src="./images/service-3.jpg" alt="планшет с палитрой цвета" width="370" />
+                <picture>
+                  <source
+                    media="(1200px)"
+                    srcset="./images/service-03d.jpg 1x, ./images/service-03d@2x.jpg 2x"
+                  />
+                  <img src="./images/service-3.jpg" alt="планшет с палитрой цвета" />
+                </picture>
                 <p class="service-list__text">Дизайнерські рішення</p>
               </a>
             </li>
@@ -152,17 +170,31 @@
       </section>
 
       <!-- our team -->
-      <!-- <section class="team section">
+      <section class="team section">
         <div class="container">
           <h2 class="section-title team__section-title">Наша команда</h2>
           <ul class="members-list list">
             <li class="members-list__item">
               <a href="" class="members-list__link link">
-                <img src="./images/person-1.jpg" alt="фото Игора Дем'яненко" width="270" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/person-01d.jpg 1x, ./images/person-01d@2x.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/person-01t.jpg 1x, ./images/person-01t@2x.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/person-1m.jpg 1x, ./images/person-1m@2x.jpg 2x"
+                  />
+                  <img src="./images/person-1.jpg" alt="фото Игора Дем'яненко" />
+                </picture>
               </a>
               <h3 class="members-list__title title">Ігор Дем'яненко</h3>
               <p lang="en" class="members-list__text">Product Designer</p>
-              <ul class="social-list list">
+              <ul class="team__social-list social-list list">
                 <li class="social-list__item">
                   <a href="" class="social-list__link link">
                     <svg class="social-list__icon" width="20px" height="20px">
@@ -195,11 +227,25 @@
             </li>
             <li class="members-list__item">
               <a href="" class="members-list__link link">
-                <img src="./images/person-2.jpg" alt="фото Ольги Репіної" width="270" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/person-02d.jpg 1x, ./images/person-02d@2x.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/person-02t.jpg 1x, ./images/person-02t@2x.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/person-2m.jpg 1x, ./images/person-2m@2x.jpg 2x"
+                  />
+                  <img src="./images/person-2.jpg" alt="фото Ольги Репіної" />
+                </picture>
               </a>
               <h3 class="members-list__title title">Ольга Репіна</h3>
               <p lang="en" class="members-list__text">Frontend Developer</p>
-              <ul class="social-list list">
+              <ul class="team__social-list social-list list">
                 <li class="social-list__item">
                   <a href="" class="social-list__link link">
                     <svg class="social-list__icon" width="20px" height="20px">
@@ -232,11 +278,25 @@
             </li>
             <li class="members-list__item">
               <a href="" class="members-list__link link">
-                <img src="./images/person-3.jpg" alt="фото Миколая Тарасова" width="270" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/person-03d.jpg 1x, ./images/person-03d@2x.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/person-03t.jpg 1x, ./images/person-03t@2x.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/person-3m.jpg 1x, ./images/person-3m@2x.jpg 2x"
+                  />
+                  <img src="./images/person-3.jpg" alt="фото Миколая Тарасова" />
+                </picture>
               </a>
               <h3 class="members-list__title title">Миколай Тарасов</h3>
               <p lang="en" class="members-list__text">Marketing</p>
-              <ul class="social-list list">
+              <ul class="team__social-list social-list list">
                 <li class="social-list__item">
                   <a href="" class="social-list__link link">
                     <svg class="social-list__icon" width="20px" height="20px">
@@ -269,11 +329,25 @@
             </li>
             <li class="members-list__item">
               <a href="" class="members-list__link link">
-                <img src="./images/person-4.jpg" alt="фото Михайла Єрмакова" width="270" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/person-04d.jpg 1x, ./images/person-04d@2x.jpg 2x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/person-04t.jpg 1x, ./images/person-04t@2x.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/person-4m.jpg 1x, ./images/person-4m@2x.jpg 2x"
+                  />
+                  <img src="./images/person-4.jpg" alt="фото Михайла Єрмакова" />
+                </picture>
               </a>
               <h3 class="members-list__title title">Михайло Єрмаков</h3>
               <p lang="en" class="members-list__text">UI Designer</p>
-              <ul class="social-list list">
+              <ul class="team__social-list social-list list">
                 <li class="social-list__item">
                   <a href="" class="social-list__link link">
                     <svg class="social-list__icon" width="20px" height="20px">
@@ -306,7 +380,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- section clients -->
       <section class="clients section">
@@ -359,11 +433,12 @@
         </div>
       </section>
     </main>
-    <!-- 
+
+    <!-- footer -->
     <footer class="footer">
       <div class="container footer__container">
         <div class="contact-information">
-          <a href="./index.html" class="logo footer__logo"
+          <a href="./index.html" class="footer__logo logo"
             >Web<span class="logo__studio logo__studio--light">Studio</span>
           </a>
           <address class="address">
@@ -444,10 +519,10 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <button type="button" class="close-btn" data-modal-close>
           <svg class="close-btn__icon" width="18px" height="18px">
@@ -522,7 +597,7 @@
           <button type="submit" class="btn">Відправити</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>

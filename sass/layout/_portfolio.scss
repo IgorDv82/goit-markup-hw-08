@@ -1,6 +1,18 @@
 .filter-list {
-  @include centered();
-  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 8px;
+  @include tablet {
+    gap: 8px;
+    justify-content: center;
+  }
+  &__item {
+    @media screen and (min-width: 460px) and (max-width: 767px) {
+      &:nth-child(3) {
+        margin-right: 30px;
+      }
+    }
+  }
   &__button {
     display: block;
     padding: 6px 22px;
@@ -28,7 +40,13 @@
   }
 }
 .portfolio__filter-list {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 48px;
+  }
 }
 
 /* ------------ */
@@ -40,10 +58,18 @@
   gap: 30px;
   padding: 0;
   &__item {
-    flex-basis: calc((100% - 60px) / 3);
+    max-width: 100%;
+    @include tablet {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @include desktop {
+      flex-basis: calc((100% - 60px) / 3);
+    }
   }
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition-property: box-shadow;
     transition-duration: var(--time-duration);
     transition-timing-function: var(--time-function);
@@ -87,7 +113,7 @@
   }
 }
 .photo-description {
-  display: block;
+  flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;

@@ -2,22 +2,35 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-background-color);
-  &__logo {
-    margin-bottom: 20px;
-  }
   &__container {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 60px;
+    @include tablet {
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
 }
-
+.footer__logo {
+  margin-bottom: 20px;
+}
 .logo__studio--light {
   color: var(--footer-logo-studio);
 }
-
+.contact-information {
+  width: 100%;
+  @include tablet {
+    flex-basis: 50%;
+  }
+}
 // footer section join-us
-.footer__join-us {
-  margin-left: 70px;
+.join-us {
+  width: 100%;
+  @include tablet {
+    flex-basis: 50%;
+  }
 }
 .join-us-title {
   @include font(14px, 700, 1.14, null);
@@ -39,7 +52,9 @@
 // end
 
 .subscribe {
-  margin-left: 93px;
+  width: 100%;
+  // display: flex;
+  // flex-wrap: wrap;
 }
 .subscribe-title {
   @include font(14px, 700, 1.14, null);
@@ -52,13 +67,22 @@
 }
 
 .subscribe-form {
-  position: relative;
-  display: flex;
+  @include desktop {
+    position: relative;
+  }
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
   &__input {
-    width: 358px;
+    width: 100%;
+    @media screen and (min-with: 480px) and (max-width: 1199px) {
+      width: 450px;
+    }
+
     height: 50px;
-    margin-right: 12px;
     padding: 15px 16px;
+    margin-bottom: 20px;
 
     color: #ffffff;
     background-color: transparent;
@@ -79,20 +103,24 @@
     }
   }
   &__label {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+    @include desktop {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      .subscribe-form__input:not(:placeholder-shown) + & {
+        transform: translate(-150%, -50%);
+        color: var(--accent-color);
+      }
+      @include font(16px, null, 1.25, 0.03em);
 
-    @include font(16px, null, 1.25, 0.03em);
-
-    color: transparent;
-    transition-property: transform, color;
-    transition-duration: var(--time-duration);
-    transition-timing-function: var(--time-function);
-    .subscribe-form__input:not(:placeholder-shown) + & {
-      transform: translate(-150%, -50%);
-      color: var(--accent-color);
+      color: transparent;
+      transition-property: transform, color;
+      transition-duration: var(--time-duration);
+      transition-timing-function: var(--time-function);
     }
   }
 }
