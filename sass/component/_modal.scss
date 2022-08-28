@@ -1,8 +1,10 @@
 .modal-title {
   width: 100%;
   text-align: center;
-
-  @include font(20px, 700, 1.15, null);
+  @include font(20px, 700, 1.5, null);
+  @include desktop {
+    @include font(20px, 700, 1.15, null);
+  }
 }
 .backdrop__modal-title {
   margin-bottom: 12px;
@@ -19,7 +21,6 @@
   margin-bottom: 4px;
   @include font(12px, null, 1.17, 0.01em);
 }
-
 .contact-form__wrap {
   position: relative;
 }
@@ -80,9 +81,13 @@
   transition-duration: var(--time-duration);
   transition-timing-function: var(--time-function);
   &::placeholder {
-    @include font(12px, null, 1.17, 00.01em);
+    @include font(14px, null, 1.14, 0.01em);
+    @include desktop {
+      @include font(12px, null, 1.17, 0.01em);
+    }
     color: rgba(117, 117, 117, 0.5);
   }
+
   &:focus {
     border-color: var(--accent-color);
   }
@@ -94,7 +99,10 @@
 }
 .agreement__label {
   @include centered();
-  @include font(14px, null, 1.71, null);
+  @include font(12px, null, 1.17, null);
+  @include desktop {
+    @include font(14px, null, 1.71, null);
+  }
 }
 .agreement__checkbox {
   @include centered();

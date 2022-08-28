@@ -1,10 +1,9 @@
 .modal-window {
   position: absolute;
   width: inherit;
-  height: inherit;
+  height: 609px;
   @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 450px;
-    height: 609px;
   }
   @include desktop {
     width: 528px;
