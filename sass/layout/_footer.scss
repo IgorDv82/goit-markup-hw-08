@@ -8,8 +8,14 @@
     text-align: center;
     gap: 60px;
     @include tablet {
-      justify-content: space-between;
+      gap: 0px;
+      justify-content: space-around;
       align-items: baseline;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+      text-align: left;
+      justify-content: space-between;
     }
   }
 }
@@ -22,14 +28,22 @@
 .contact-information {
   width: 100%;
   @include tablet {
-    flex-basis: 50%;
+    width: 50%;
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    width: max-content;
   }
 }
 // footer section join-us
 .join-us {
   width: 100%;
   @include tablet {
-    flex-basis: 50%;
+    width: 50%;
+  }
+  @include desktop {
+    width: max-content;
   }
 }
 .join-us-title {
@@ -53,6 +67,12 @@
 
 .subscribe {
   width: 100%;
+  @include tablet {
+    width: 450px;
+  }
+  @include desktop {
+    width: max-content;
+  }
   // display: flex;
   // flex-wrap: wrap;
 }
@@ -69,20 +89,22 @@
 .subscribe-form {
   @include desktop {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
   &__input {
     width: 100%;
-    @media screen and (min-with: 480px) and (max-width: 1199px) {
-      width: 450px;
-    }
-
     height: 50px;
     padding: 15px 16px;
+    margin-right: 12px;
     margin-bottom: 20px;
+    @media screen and (min-with: 480px) {
+      width: 450px;
+    }
+    @include desktop {
+      width: 358px;
+    }
 
     color: #ffffff;
     background-color: transparent;

@@ -9,10 +9,19 @@
 .navigation {
   @include centered(flex, center, null);
 }
+.header__logo {
+  padding: 16px 0;
+  @include tablet {
+    padding: 26px 0;
+  }
+  @include desktop {
+    padding: 24px 0 25px;
+  }
+}
 // links
 
 .header__link-list {
-  margin-left: 93px;
+  margin-left: 87px;
 }
 
 // contacts

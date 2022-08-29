@@ -1,12 +1,18 @@
 .contacts {
-  @include centered(flex, center, null);
-  & .contacts__item + .contacts__item {
-    margin-left: 10px;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  @include desktop {
+    @include centered(flex, center, null);
+    & .contacts__item + .contacts__item {
+      margin-left: 10px;
+    }
   }
   &__link {
     @include centered(flex, center, null);
-    padding-top: 31px;
-    padding-bottom: 31px;
 
     @include font(14px, 500, 1.14, 0.02em);
 

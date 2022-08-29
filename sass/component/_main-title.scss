@@ -1,7 +1,13 @@
 .main__title {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   @include font(26px, 900, 1.62, 0.06em);
-
+  @include mobile {
+    width: 360px;
+  }
   @include desktop {
+    width: 696px;
     @include font(44px, 900, 1.36, 0.06em);
   }
 

@@ -31,6 +31,10 @@
   }
   &__title {
     margin-bottom: 10px;
+    text-align: center;
+    @include tablet {
+      text-align: left;
+    }
 
     @include font(14px, 700, 1.14, null);
     text-transform: uppercase;
