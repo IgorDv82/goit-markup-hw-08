@@ -13,7 +13,7 @@
     gap: 30px;
   }
   &__item {
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 479.5px) {
       width: 100%;
       &:not(:last-child) {
         margin-bottom: 30px;

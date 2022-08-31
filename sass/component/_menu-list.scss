@@ -1,18 +1,11 @@
-.link-list {
-  display: none;
-  @include tablet {
-    display: flex;
-  }
-  & .link-list__item + .link-list__item {
-    margin-left: 50px;
+.menu-list {
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
   }
   &__link {
     position: relative;
-    @include centered(flex, center, null);
-    padding-top: 32px;
-    padding-bottom: 32px;
 
-    @include font(14px, 500, 1.14, 0.02em);
+    @include font(40px, 500, 1.175, 0.02em);
 
     color: var(--primary-title-color);
 

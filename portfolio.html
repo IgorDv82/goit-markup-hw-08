@@ -5,12 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -18,7 +12,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
@@ -26,40 +19,98 @@
     <!-- header -->
     <header class="header">
       <div class="container header-container">
-        <nav class="navigation">
-          <a href="./index.html" class="header__logo logo"
-            >Web<span class="logo__studio">Studio</span>
-          </a>
-          <ul class="link-list header__link-list list">
-            <li class="link-list__item">
-              <a href="./index.html" class="link-list__link link current"> Студія </a>
+        <div class="header-overlay">
+          <nav class="navigation">
+            <a href="./index.html" class="header__logo logo"
+              >Web<span class="logo__studio">Studio</span>
+            </a>
+            <ul class="link-list header__link-list list">
+              <li class="link-list__item">
+                <a href="./index.html" class="link-list__link link"> Студія </a>
+              </li>
+              <li class="link-list__item">
+                <a href="./portfolio.html" class="link-list__link link current"> Портфоліо </a>
+              </li>
+              <li class="link-list__item">
+                <a href="./" class="link-list__link link"> Контакти </a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts header__contacts list">
+            <li class="contacts__item">
+              <a href="mailto:info@example.com" class="contacts__link link">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+                info@example.com
+              </a>
             </li>
-            <li class="link-list__item">
-              <a href="./portfolio.html" class="link-list__link link"> Портфоліо </a>
-            </li>
-            <li class="link-list__item">
-              <a href="" class="link-list__link link"> Контакти </a>
+            <li class="contacts__item">
+              <a href="tel:+380991111111" class="contacts__link link">
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+                +38 099 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="contacts header__contacts list">
-          <li class="contacts__item">
-            <a href="mailto:info@example.com" class="contacts__link link">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-mail"></use>
+        </div>
+        <button type="button" class="menu-open" aria-label="відкрити мобільне меню">
+          <svg class="menu-open__icon" width="40px" height="40px">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="menu-window is-hidden">
+        <div class="container menu-window__container">
+          <div class="menu-top">
+            <button type="button" class="menu-close" aria-label="закрити мобільне меню">
+              <svg class="menu-close__icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-close"></use>
               </svg>
-              info@example.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+380991111111" class="contacts__link link">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-              +38 099 111 11 11
-            </a>
-          </li>
-        </ul>
+            </button>
+            <nav>
+              <ul class="menu-list list">
+                <li class="menu-list__item">
+                  <a href="./index.html" class="menu-list__link link"> Студія </a>
+                </li>
+                <li class="menu-list__item">
+                  <a href="./portfolio.html" class="menu-list__link link current"> Портфоліо </a>
+                </li>
+                <li class="menu-list__item">
+                  <a href="./" class="menu-list__link link"> Контакти </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="menu-bottom">
+            <ul class="menu-contacts list">
+              <li class="menu-contacts__item">
+                <a href="tel:+380991111111" class="menu-contacts__link link"> +38 099 111 11 11 </a>
+              </li>
+              <li class="menu-contacts__item">
+                <a href="mailto:info@example.com" class="menu-contacts__link link">
+                  info@example.com
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-soc-list list">
+              <li class="menu-soc-list__item">
+                <a href="./" class="menu-soc-list__link link">Instagram</a>
+              </li>
+              <li class="menu-soc-list__item">
+                <a href="./" class="menu-soc-list__link link">Twitter</a>
+              </li>
+              <li class="menu-soc-list__item">
+                <a href="./" class="menu-soc-list__link link">Facebook</a>
+              </li>
+              <li class="menu-soc-list__item">
+                <a href="./" class="menu-soc-list__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -91,7 +142,7 @@
           <!-- portfolio items -->
           <ul class="card-list portfolio__card-list list">
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -106,7 +157,7 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-01m.jpg 1x, ./images/portfolio-01m@2x.jpg"
                     />
-                    <img src="./images/potfolio-1.jpg" alt="трое людей на экране ноутбука" />
+                    <img src="./images/portfolio-01m.jpg" alt="трое людей на экране ноутбука" />
                   </picture>
 
                   <p class="photo-thumb__text">
@@ -122,7 +173,7 @@
               </a>
             </li>
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -137,7 +188,7 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-02m.jpg 1x, ./images/portfolio-02m@2x.jpg"
                     />
-                    <img src="./images/potfolio-2.jpg" alt="два баскетболиста и мяч" />
+                    <img src="./images/portfolio-02m.jpg" alt="два баскетболиста и мяч" />
                   </picture>
 
                   <p class="photo-thumb__text">
@@ -153,7 +204,7 @@
               </a>
             </li>
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -168,7 +219,10 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-03m.jpg 1x, ./images/portfolio-03m@2x.jpg"
                     />
-                    <img src="./images/potfolio-3.jpg" alt="акула, на которой название ресторана" />
+                    <img
+                      src="./images/portfolio-03m.jpg"
+                      alt="акула, на которой название ресторана"
+                    />
                   </picture>
                   <p class="photo-thumb__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -183,7 +237,7 @@
               </a>
             </li>
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -198,7 +252,7 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-04m.jpg 1x, ./images/portfolio-04m@2x.jpg"
                     />
-                    <img src="./images/potfolio-4.jpg" alt="беспроводные внешние наушники" />
+                    <img src="./images/portfolio-04m.jpg" alt="беспроводные внешние наушники" />
                   </picture>
                   <p class="photo-thumb__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -213,7 +267,7 @@
               </a>
             </li>
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -228,7 +282,7 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-05m.jpg 1x, ./images/portfolio-05m@2x.jpg"
                     />
-                    <img src="./images/potfolio-5.jpg" alt="две подарочных картонных коробки" />
+                    <img src="./images/portfolio-05m.jpg" alt="две подарочных картонных коробки" />
                   </picture>
                   <p class="photo-thumb__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -243,7 +297,7 @@
               </a>
             </li>
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -258,7 +312,7 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-06m.jpg 1x, ./images/portfolio-06m@2x.jpg"
                     />
-                    <img src="./images/potfolio-6.jpg" alt="монитор с информацией" />
+                    <img src="./images/portfolio-06m.jpg" alt="монитор с информацией" />
                   </picture>
                   <p class="photo-thumb__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -273,7 +327,7 @@
               </a>
             </li>
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -288,7 +342,7 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-07m.jpg 1x, ./images/portfolio-07m@2x.jpg"
                     />
-                    <img src="./images/potfolio-7.jpg" alt="открытая книга" />
+                    <img src="./images/portfolio-07m.jpg" alt="открытая книга" />
                   </picture>
                   <p class="photo-thumb__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -303,7 +357,7 @@
               </a>
             </li>
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -318,7 +372,7 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-08m.jpg 1x, ./images/portfolio-08m@2x.jpg"
                     />
-                    <img src="./images/potfolio-8.jpg" alt="картонная этикетка на верёвке" />
+                    <img src="./images/portfolio-08m.jpg" alt="картонная этикетка на верёвке" />
                   </picture>
 
                   <p class="photo-thumb__text">
@@ -334,7 +388,7 @@
               </a>
             </li>
             <li class="card-list__item">
-              <a href="" class="card-list__link link">
+              <a href="./" class="card-list__link link">
                 <div class="photo-thumb">
                   <picture>
                     <source
@@ -349,7 +403,7 @@
                       media="(max-width: 767px)"
                       srcset="./images/portfolio-09m.jpg 1x, ./images/portfolio-09m@2x.jpg"
                     />
-                    <img src="./images/potfolio-9.jpg" alt="работа на ноутбуке" />
+                    <img src="./images/portfolio-09m.jpg" alt="работа на ноутбуке" />
                   </picture>
                   <p class="photo-thumb__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -402,28 +456,44 @@
           <p class="join-us-title footer__join-us-title">приєднуйтесь</p>
           <ul class="social-list list">
             <li class="social-list__item">
-              <a href="" class="social-list__link social-list__link--background link">
+              <a
+                href="./"
+                class="social-list__link social-list__link--background link"
+                aria-label="Instagram"
+              >
                 <svg class="social-list__icon social-list__icon--color" width="20px" height="20px">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
-              <a href="" class="social-list__link social-list__link--background link">
+              <a
+                href="./"
+                class="social-list__link social-list__link--background link"
+                aria-label="Twitter"
+              >
                 <svg class="social-list__icon social-list__icon--color" width="20px" height="20px">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
-              <a href="" class="social-list__link social-list__link--background link">
+              <a
+                href="./"
+                class="social-list__link social-list__link--background link"
+                aria-label="Facebook"
+              >
                 <svg class="social-list__icon social-list__icon--color" width="20px" height="20px">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
-              <a href="" class="social-list__link social-list__link--background link">
+              <a
+                href="./"
+                class="social-list__link social-list__link--background link"
+                aria-label="Linkedin"
+              >
                 <svg class="social-list__icon social-list__icon--color" width="20px" height="20px">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
@@ -441,6 +511,7 @@
               id="subscribe-email"
               class="subscribe-form__input"
               placeholder="E-mail"
+              aria-label="введіть електронну пошту"
             />
             <label for="subscribe-email" class="subscribe-form__label">E-mail</label>
             <button type="submit" class="subscribe__btn btn">
@@ -453,5 +524,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

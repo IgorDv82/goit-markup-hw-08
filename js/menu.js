@@ -2,9 +2,9 @@
   const refs = {
     openMenuBtn: document.querySelector('.menu-open'),
     closeMenuBtn: document.querySelector('.menu-close'),
-    menu: document.querySelector('.mob-menu'),
+    menu: document.querySelector('.menu-window'),
     body: document.querySelector('body'),
-    menuList: document.querySelector('.mob-menu-list'),
+    menuList: document.querySelector('.menu-list'),
   };
 
   refs.openMenuBtn.addEventListener('click', toggleMenu);

@@ -1,17 +1,22 @@
 .contacts {
+  display: none;
   @include tablet {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     row-gap: 10px;
   }
-
   @include desktop {
-    @include centered(flex, center, null);
+    flex-direction: row;
     & .contacts__item + .contacts__item {
-      margin-left: 10px;
+      margin-left: 30px;
     }
   }
   &__link {
+    @include desktop {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
     @include centered(flex, center, null);
 
     @include font(14px, 500, 1.14, 0.02em);

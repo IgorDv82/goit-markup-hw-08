@@ -1,0 +1,21 @@
+.menu-contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  max-width: 100%;
+  margin-bottom: 64px;
+  &__item:first-child {
+    @include font(30px, 500, 1.176, 0.02em);
+    @include mobile {
+      @include font(34px, 500, 1.176, 0.02em);
+    }
+    color: var(--accent-color);
+  }
+  &__item:last-child {
+    @include font(24px, 500, 1.17, 0.02em);
+    color: var(--primary-color-text);
+  }
+  &__link {
+    color: currentColor;
+  }
+}
