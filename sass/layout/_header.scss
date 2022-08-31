@@ -9,9 +9,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  @include desktop {
-    justify-content: space-around;
-  }
 }
 .navigation {
   @include centered(flex, center, null);
